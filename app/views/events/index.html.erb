@@ -1,1 +1,13 @@
-events#index page
+<h1>All events</h1>
+
+<% @events.each do |event| %>
+	<h2><%= event.name %></h2>
+	<h3><%= event.city %></h3>
+	<h4><%= event.date %></h3>
+	<h4><%= event.capacity %></h3>
+		<%= link_to "view", event_path(event) %>
+<% end %>
+
+<p>
+	<%= link_to("New Event", new_event_path) %> 
+</p>

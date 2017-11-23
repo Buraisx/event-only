@@ -13,31 +13,31 @@
 ActiveRecord::Schema.define(version: 20170302213154) do
 
   create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.date     "date"
-    t.integer  "capacity"
+    t.string "name"
+    t.date "date"
+    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "city"
+    t.string "city"
   end
 
   create_table "job_applications", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "phone"
-    t.string   "hobby"
-    t.integer  "years_experience"
-    t.date     "available_date"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string "full_name"
+    t.string "phone"
+    t.string "hobby"
+    t.integer "years_experience"
+    t.date "available_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "locations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "city"
-    t.text     "description"
-    t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string "name"
+    t.string "city"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

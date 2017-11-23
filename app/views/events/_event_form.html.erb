@@ -1,0 +1,11 @@
+<!-- Fields that need to be created -->
+<% update_fields = [:name, :date, :capacity] %>
+<!-- Form for new event -->
+<%= form_for event do |details| %>
+	<!-- Loop through fields to DRY up code-->
+	<% update_fields.each do |field| %>
+		<%= details.label field%>
+		<%= details.text_field field%>
+	<% end %>
+	<%= details.submit %>
+<% end %>
