@@ -1,1 +1,24 @@
-example@form page
+<h1>Job Application</h1>
+
+<%= form_for @job_application do |fields|%>
+	<p>
+		<%= fields.label( :full_name )  %>
+		<%= fields.text_field (:full_name)%>
+	</p>
+	<p>
+		<%= fields.label( :phone )  %>
+		<%= fields.telephone_field (:phone)%>
+	</p>
+	<p>
+		<%= fields.label( :hobby )  %>
+		<%= fields.text_field (:hobby)%>
+	</p>
+	<p>
+		<%= fields.label( :years_experience)  %>
+		<%= fields.number_field (:years_experience)%>
+	</p>
+	<p>
+		<%= fields.label( :available_date)  %>
+		<%= fields.date_field (:available_date)%>
+	</p>
+<% end %>
